@@ -1,0 +1,25 @@
+.container{
+  display: grid;
+  grid-template-columns: 1fr;
+  align-items: center;
+  justify-items: center;
+  grid-gap: 30px;
+}
+
+.row{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+  justify-items: center;
+  width: 70%;
+  border: 1px solid green;
+}
+
+.info{
+  display: grid;
+  grid-template-columns: 1fr;
+  align-items: center;
+  justify-items: center;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  padding: 32px;
+}
