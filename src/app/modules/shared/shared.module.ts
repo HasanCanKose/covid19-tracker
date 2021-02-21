@@ -1,10 +1,11 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { StatisticSummaryComponent } from './statistic-summary/statistic-summary.component';
 
 
 
 @NgModule({
-  declarations: [],
+  declarations: [StatisticSummaryComponent],
   imports: [
     CommonModule
   ]
