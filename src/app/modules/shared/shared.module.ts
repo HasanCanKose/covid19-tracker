@@ -8,6 +8,7 @@ import { StatisticSummaryComponent } from './statistic-summary/statistic-summary
   declarations: [StatisticSummaryComponent],
   imports: [
     CommonModule
-  ]
+  ],
+  exports: [StatisticSummaryComponent]
 })
 export class SharedModule { }
