@@ -63,8 +63,9 @@ hr {
   border: 0;
   display:block;
   width: 90%;
-  background: linear-gradient( 135deg, #9f05ff69 10%, #fd5e086b 100%);
-  height: 3px;
+  background: linear-gradient(to right, rgba(0, 0, 0, 0), #9f05ff69, #fd5e086b, rgba(0, 0, 0, 0));
+  height: 2px;
   margin: 20px 0;
 }
+
 

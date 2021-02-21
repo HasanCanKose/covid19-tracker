@@ -22,7 +22,7 @@ header .overlay{
 h1 {
   font-family: 'Dancing Script', cursive;
   font-size: 80px;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
 }
 
 h3 {
@@ -33,7 +33,7 @@ h3 {
 input {
   width: 30%;
   padding: 12px 20px;
-  margin: 8px 0;
+  margin: 20px 0;
   display: inline-block;
   border: 1px solid #ccc;
   border-radius: 4px;
