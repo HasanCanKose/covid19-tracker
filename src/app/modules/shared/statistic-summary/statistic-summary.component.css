@@ -12,14 +12,35 @@
   align-items: center;
   justify-items: center;
   width: 70%;
-  border: 1px solid green;
 }
 
 .info{
   display: grid;
   grid-template-columns: 1fr;
+  grid-gap: 10px;
   align-items: center;
   justify-items: center;
-  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
-  padding: 32px;
+  box-shadow: 0 5px 10px rgba(144, 41, 246, 0.4);
+  border-radius: 8px;
+  padding: 48px 32px;
+  width: 80%;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.active{
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 10px;
+  align-items: center;
+  justify-items: center;
+  box-shadow: 0 5px 10px rgba(144, 41, 246, 0.4);
+  border-radius: 8px;
+  width: 40%;
+}
+
+.header {
+  text-align: center;
+  background-color: #f1f1f1;
+  padding: 20px 10px;
+  width: 100%;
 }

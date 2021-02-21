@@ -3,4 +3,6 @@ export interface StatisticResponseModel {
   cases: number;
   deaths: number;
   recovered: number;
+  active: number;
+  critical: number;
 }

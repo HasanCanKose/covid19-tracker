@@ -1,4 +1,7 @@
 <div class="container">
+  <div class="general-info">
+    <h1>General Information</h1>
+  </div>
   <div class="row">
     <div class="tests info">
       <h1>Tests</h1>
@@ -17,6 +20,29 @@
     <div class="recovered info">
       <h1>Recovered</h1>
       <h2>{{statistics.recovered | comma}}</h2>
+    </div>
+  </div>
+  <hr>
+  <hr>
+  <hr>
+  <div class="active">
+    <div class="header">
+      <h1>Active Cases</h1>
+    </div>
+    <br>
+    <div class="all-patients">
+      <h2>{{statistics.active}}</h2>
+      <p>Currently Infected Patients</p>
+    </div>
+    <div class="row">
+      <div class="mild">
+        <h2>{{statistics.active - statistics.critical}}</h2>
+        <p>in Mild Condition</p>
+      </div>
+      <div class="critical">
+        <h2>{{statistics.critical}}</h2>
+        <p>Serious or Critical</p>
+      </div>
     </div>
   </div>
 </div>
