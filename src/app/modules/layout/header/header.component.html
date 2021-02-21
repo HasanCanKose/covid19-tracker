@@ -2,6 +2,8 @@
   <div class="overlay">
     <h1>Covid19 Tracker</h1>
     <h3>See the latest statistics</h3>
-    <input type="text" placeholder="Select a country...">
+    <form (keydown)="onSubmit($event)" #form='ngForm'>
+      <input type="text" placeholder="Select a country..." ngModel name="countryInput">
+    </form>
   </div>
 </header>
