@@ -6,6 +6,7 @@ import {LayoutModule} from './modules/layout/layout.module';
 import {AppRoutingModule} from './app-routing.module';
 import {SharedModule} from './modules/shared/shared.module';
 import {StatisticModule} from './modules/statistic/statistic.module';
+import {HttpClientModule} from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import {StatisticModule} from './modules/statistic/statistic.module';
     LayoutModule,
     AppRoutingModule,
     SharedModule,
-    StatisticModule
+    StatisticModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

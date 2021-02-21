@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import {StatisticService} from '../../../services/statistic.service';
+import {StatisticResponseModel} from '../models/statistic-response.model';
 
 @Component({
   selector: 'app-world',
@@ -7,9 +9,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class WorldComponent implements OnInit {
 
-  constructor() { }
+  statistics: StatisticResponseModel;
+
+
+  constructor(private statisticService: StatisticService) { }
 
   ngOnInit(): void {
+    this.statisticService.worldStatistics().subscribe(statistics => {
+      this.statistics = statistics;
+    })
+
   }
 
 }
