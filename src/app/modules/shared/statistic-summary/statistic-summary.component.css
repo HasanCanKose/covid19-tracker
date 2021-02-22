@@ -22,7 +22,7 @@
   grid-gap: 10px;
   align-items: center;
   justify-items: center;
-  box-shadow: 0 5px 10px rgba(144, 41, 246, 0.4);
+  box-shadow: 0 3px 7px #fd5e086b;
   border-radius: 8px;
   padding: 48px 32px;
   width: 80%;
@@ -34,7 +34,7 @@
   grid-gap: 10px;
   align-items: center;
   justify-items: center;
-  box-shadow: 0 5px 10px rgba(144, 41, 246, 0.4);
+  box-shadow: 0 5px 10px #fd5e086b;
   border-radius: 8px;
   width: 40%;
   text-align: center;
