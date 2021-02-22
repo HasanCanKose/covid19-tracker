@@ -1,5 +1,6 @@
 import {Component, Input, OnInit} from '@angular/core';
 import {StatisticResponseModel} from '../../statistic/models/statistic-response.model';
+import {CountryResponseModel} from '../../statistic/models/country-response.model';
 
 @Component({
   selector: 'app-statistic-summary',
@@ -9,10 +10,15 @@ import {StatisticResponseModel} from '../../statistic/models/statistic-response.
 export class StatisticSummaryComponent implements OnInit {
 
   @Input() statistics: StatisticResponseModel;
+  @Input() countryStatistics: CountryResponseModel;
+
+  @Input() isCountry;
+  @Input() isWorld;
 
   constructor() { }
 
   ngOnInit(): void {
+    console.log(this.countryStatistics);
   }
 
 }
