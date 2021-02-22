@@ -1,7 +1,7 @@
 import {Component, OnDestroy, OnInit} from '@angular/core';
 import {ActivatedRoute} from '@angular/router';
 import {CountryService} from '../../../services/country.service';
-import {CountryResponseModel} from '../models/country-response.model';
+import {CountryResponseModel} from '../../../models/country-response.model';
 import {StatisticService} from '../../../services/statistic.service';
 
 @Component({
@@ -21,14 +21,14 @@ export class CountriesComponent implements OnInit, OnDestroy {
 
   ngOnInit(): void {
 
-    this.countryService.country$.subscribe(country => {
-      this.country = country;
-      console.log(this.country);
-      this.statisticService.countryStatistics(this.country).subscribe(countryStatistics => {
-        this.countryStatistics = countryStatistics;
-        console.log(this.countryStatistics.cases);
-      });
-    });
+    // this.countryService.country$.subscribe(country => {
+    //   this.country = country;
+    //   console.log(this.country);
+    //   this.statisticService.countryStatistics(this.country).subscribe(countryStatistics => {
+    //     this.countryStatistics = countryStatistics;
+    //     console.log(this.countryStatistics.cases);
+    //   });
+    // });
 
     this.isCountry = true;
   }

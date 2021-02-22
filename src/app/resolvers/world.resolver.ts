@@ -1,6 +1,6 @@
 import {Injectable} from '@angular/core';
 import {ActivatedRouteSnapshot, Resolve, RouterStateSnapshot} from '@angular/router';
-import {StatisticResponseModel} from '../modules/statistic/models/statistic-response.model';
+import {StatisticResponseModel} from '../models/statistic-response.model';
 import {Observable} from 'rxjs';
 import {StatisticService} from '../services/statistic.service';
 

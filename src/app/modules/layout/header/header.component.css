@@ -23,6 +23,7 @@ h1 {
   font-family: 'Dancing Script', cursive;
   font-size: 80px;
   margin-bottom: 30px;
+  cursor: pointer;
 }
 
 h3 {
