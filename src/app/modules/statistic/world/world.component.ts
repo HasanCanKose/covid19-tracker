@@ -19,9 +19,7 @@ export class WorldComponent implements OnInit, OnDestroy {
   }
 
   ngOnInit(): void {
-
     this.isWorld = true;
-
   }
  ngOnDestroy() {
     this.isWorld = false;

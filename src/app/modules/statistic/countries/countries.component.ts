@@ -15,16 +15,18 @@ export class CountriesComponent implements OnInit, OnDestroy {
   countryStatistics: CountryResponseModel;
   isCountry;
 
-  constructor(private route: ActivatedRoute, private countryService: CountryService, private statisticService: StatisticService) { }
+  constructor(private route: ActivatedRoute, private countryService: CountryService, private statisticService: StatisticService) {
+    this.route.data.subscribe(countryStatistics => this.countryStatistics = countryStatistics['country']);
+  }
 
   ngOnInit(): void {
-    // this.route.queryParamMap.subscribe(params => {
-    //   this.country = params['country'];
-    // });
+
     this.countryService.country$.subscribe(country => {
       this.country = country;
+      console.log(this.country);
       this.statisticService.countryStatistics(this.country).subscribe(countryStatistics => {
         this.countryStatistics = countryStatistics;
+        console.log(this.countryStatistics.cases);
       });
     });
 

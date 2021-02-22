@@ -1,14 +1,21 @@
-import { Injectable } from '@angular/core';
+import {Injectable, OnInit} from '@angular/core';
 import {HttpClient} from '@angular/common/http';
 import {StatisticResponseModel} from '../modules/statistic/models/statistic-response.model';
 import {CountryResponseModel} from '../modules/statistic/models/country-response.model';
+import {ActivatedRoute} from '@angular/router';
 
 @Injectable({
   providedIn: 'root'
 })
-export class StatisticService {
+export class StatisticService implements OnInit{
 
-  constructor(private http: HttpClient) { }
+  country;
+
+  constructor(private http: HttpClient, private route: ActivatedRoute) { }
+
+  ngOnInit() {
+    this.route.queryParams.subscribe(params => this.country = params['country']);
+  }
 
   worldStatistics() {
     return this.http.get<StatisticResponseModel>('https://corona.lmao.ninja/v2/all?yesterday');

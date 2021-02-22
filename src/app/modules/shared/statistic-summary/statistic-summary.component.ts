@@ -18,7 +18,6 @@ export class StatisticSummaryComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-    console.log(this.countryStatistics);
   }
 
 }
