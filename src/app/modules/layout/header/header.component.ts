@@ -19,8 +19,6 @@ export class HeaderComponent implements OnInit {
 
   onSubmit() {
       this.countryInput = this.countryForm.value.countryInput;
-      console.log(this.countryInput);
-      this.countryService.country$.next(this.countryInput);
       this.router.navigate([`countries/${this.countryInput}`], {relativeTo: this.route});
   }
 

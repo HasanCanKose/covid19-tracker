@@ -9,20 +9,16 @@ import {WorldResponseModel} from '../../../models/world-response.model';
   templateUrl: './world.component.html',
   styleUrls: ['./world.component.css']
 })
-export class WorldComponent implements OnInit, OnDestroy {
+export class WorldComponent implements OnInit {
 
   statistics: WorldResponseModel;
-  isWorld;
-
 
   constructor(private statisticService: StatisticService, private route: ActivatedRoute) {
-    this.route.data.subscribe(statistics => this.statistics = statistics['world']);
+    this.route.data.subscribe(data => this.statistics = data['statistics']);
   }
 
   ngOnInit(): void {
-    this.isWorld = true;
+
   }
- ngOnDestroy() {
-    this.isWorld = false;
- }
+
 }

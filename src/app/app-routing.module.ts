@@ -7,8 +7,8 @@ import {CountryResolver} from './resolvers/country.resolver';
 
 const appRoutes: Routes = [
   {path: '', redirectTo: '/home', pathMatch: 'full'},
-  {path: 'home', component: WorldComponent, resolve: {world: WorldResolver}},
-  {path: 'countries/:country', component: CountriesComponent, resolve: {country: CountryResolver}}
+  {path: 'home', component: WorldComponent, resolve: {statistics: WorldResolver}},
+  {path: 'countries/:country', component: CountriesComponent, resolve: {statistics: CountryResolver}}
 ]
 
 @NgModule({

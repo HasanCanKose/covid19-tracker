@@ -1,6 +1,5 @@
 import {Component, Input, OnInit} from '@angular/core';
 import {StatisticResponseModel} from '../../../models/statistic-response.model';
-import {CountryResponseModel} from '../../../models/country-response.model';
 
 @Component({
   selector: 'app-statistic-summary',
