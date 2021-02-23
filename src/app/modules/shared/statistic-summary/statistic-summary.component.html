@@ -23,7 +23,8 @@
     </div>
   </div>
   <hr>
-  <div class="active">
+  <div class="row-active-closed">
+  <div class="content">
     <div class="header">
       <h1>Active Cases</h1>
     </div>
@@ -40,6 +41,27 @@
       <div class="critical">
         <h2>{{statistics.critical | comma}}</h2>
         <p>Serious or Critical</p>
+      </div>
+    </div>
+  </div>
+    <div class="content">
+      <div class="header">
+        <h1>Closed Cases</h1>
+      </div>
+      <br>
+      <div class="all-patients">
+        <h2>{{statistics.recovered + statistics.deaths | comma}}</h2>
+        <p>Cases which had an outcome</p>
+      </div>
+      <div class="row">
+        <div class="mild">
+          <h2 id="recovered">{{statistics.recovered | comma}}</h2>
+          <p>Recovered</p>
+        </div>
+        <div class="critical">
+          <h2>{{statistics.deaths | comma}}</h2>
+          <p>Deaths</p>
+        </div>
       </div>
     </div>
   </div>

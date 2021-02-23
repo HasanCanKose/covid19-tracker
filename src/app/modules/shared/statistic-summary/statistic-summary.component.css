@@ -28,7 +28,7 @@
   width: 80%;
 }
 
-.active{
+.content{
   display: grid;
   grid-template-columns: 1fr;
   grid-gap: 10px;
@@ -36,7 +36,7 @@
   justify-items: center;
   box-shadow: 0 5px 10px #fd5e086b;
   border-radius: 8px;
-  width: 40%;
+  width: 80%;
   text-align: center;
   padding-bottom: 20px;
 }
@@ -53,10 +53,14 @@
 }
 
 .mild h2{
-  color: green;
+  color: cornflowerblue;
 }
 .critical h2{
   color: red;
+}
+
+#recovered{
+  color: green;
 }
 
 hr {
@@ -66,6 +70,14 @@ hr {
   background: linear-gradient(to right, rgba(0, 0, 0, 0), #9f05ff69, #fd5e086b, rgba(0, 0, 0, 0));
   height: 2px;
   margin: 20px 0;
+}
+
+.row-active-closed{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+  justify-items: center;
+  width: 90%;
 }
 
 .today-row{
