@@ -68,4 +68,12 @@ hr {
   margin: 20px 0;
 }
 
+.today-row{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  align-items: center;
+  justify-items: center;
+  width: 90%;
+}
+
 
