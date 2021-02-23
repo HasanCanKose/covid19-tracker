@@ -63,6 +63,10 @@
   color: green;
 }
 
+#deaths{
+  color: black;
+}
+
 hr {
   border: 0;
   display:block;
