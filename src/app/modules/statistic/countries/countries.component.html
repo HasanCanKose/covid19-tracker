@@ -1,1 +1,16 @@
+<div class="content">
+  <div class="left"></div>
+  <div class="mid">
+    <div class="mid-content">
+      <div class="flag">
+        <img [src]="statistics.countryInfo.flag" alt="">
+      </div>
+      <div class="title">
+        <h1>{{statistics.country}}</h1>
+      </div>
+    </div>
+  </div>
+  <div class="right"></div>
+</div>
+
 <app-statistic-summary [statistics]="statistics"></app-statistic-summary>
