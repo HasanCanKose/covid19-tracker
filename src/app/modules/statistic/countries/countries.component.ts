@@ -16,10 +16,10 @@ export class CountriesComponent implements OnInit {
 
   constructor(private route: ActivatedRoute) {
     this.route.data.subscribe(data => this.statistics = data['statistics']);
+    this.route.data.subscribe(data => this.dateStatistics = data['dateStatistics']);
   }
 
   ngOnInit(): void {
 
   }
-
 }
