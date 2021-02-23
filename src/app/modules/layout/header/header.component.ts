@@ -20,6 +20,7 @@ export class HeaderComponent implements OnInit {
   onSubmit() {
       this.countryInput = this.countryForm.value.countryInput;
       this.router.navigate([`countries/${this.countryInput}`], {relativeTo: this.route});
+      this.countryForm.reset();
   }
 
   onNavigate() {
