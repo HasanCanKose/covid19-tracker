@@ -29,9 +29,7 @@ export class StatisticService implements OnInit{
   }
 
   countryDateStatistics(country: string) {
-    return this.http.get<CountryDateResponseModel>(`https://corona.lmao.ninja/v2/historical/${country}?lastdays=30`).pipe(
-      map(response => response.timeline)
-    );
+    return this.http.get<CountryDateResponseModel>(`https://corona.lmao.ninja/v2/historical/${country}?lastdays=30`);
   }
 
 }
