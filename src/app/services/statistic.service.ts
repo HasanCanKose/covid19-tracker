@@ -4,6 +4,8 @@ import {StatisticResponseModel} from '../models/statistic-response.model';
 import {CountryResponseModel} from '../models/country-response.model';
 import {ActivatedRoute} from '@angular/router';
 import {WorldResponseModel} from '../models/world-response.model';
+import {CountryDateResponseModel} from '../models/country-date-response.model';
+import {map} from 'rxjs/operators';
 
 @Injectable({
   providedIn: 'root'
@@ -24,6 +26,12 @@ export class StatisticService implements OnInit{
 
   countryStatistics(country: string) {
     return this.http.get<CountryResponseModel>(`https://corona.lmao.ninja/v2/countries/${country}?yesterday=true&strict=true&query`);
+  }
+
+  countryDateStatistics(country: string) {
+    return this.http.get<CountryDateResponseModel>(`https://corona.lmao.ninja/v2/historical/${country}?lastdays=30`).pipe(
+      map(response => response.timeline)
+    );
   }
 
 }
