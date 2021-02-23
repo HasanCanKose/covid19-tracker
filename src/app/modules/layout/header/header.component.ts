@@ -1,6 +1,5 @@
 import {Component, OnInit, ViewChild} from '@angular/core';
 import {NgForm} from '@angular/forms';
-import {CountryService} from '../../../services/country.service';
 import {ActivatedRoute, Router} from '@angular/router';
 
 @Component({
@@ -12,7 +11,7 @@ export class HeaderComponent implements OnInit {
   @ViewChild('form', {static: true}) countryForm: NgForm;
   countryInput;
 
-  constructor(private countryService: CountryService, private router: Router, private route: ActivatedRoute) { }
+  constructor(private router: Router, private route: ActivatedRoute) { }
 
   ngOnInit(): void {
   }
