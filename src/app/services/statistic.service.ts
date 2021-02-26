@@ -34,4 +34,8 @@ export class StatisticService implements OnInit{
   worldDailyStatistics() {
     return this.http.get<WorldDailyResponseModel>('https://corona.lmao.ninja/v2/historical/all');
   }
+
+  countryNames() {
+    return this.http.get<{ Country: string, Slug: string, ISO2: string }>('https://api.covid19api.com/countries');
+  }
 }

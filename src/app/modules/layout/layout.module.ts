@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import {FormsModule} from '@angular/forms';
+import {NgSelectModule} from '@ng-select/ng-select';
 
 
 
@@ -10,7 +11,8 @@ import {FormsModule} from '@angular/forms';
   declarations: [HeaderComponent, FooterComponent],
   imports: [
     CommonModule,
-    FormsModule
+    FormsModule,
+    NgSelectModule
   ],
   exports: [HeaderComponent, FooterComponent]
 })
