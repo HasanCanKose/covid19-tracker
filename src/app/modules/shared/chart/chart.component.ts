@@ -14,6 +14,7 @@ export class ChartComponent implements OnInit {
   @Input() cases: number[];
   @Input() label: string;
   @Input() type: string;
+  @Input() backgroundColor: string;
 
   constructor() { }
 
@@ -29,6 +30,7 @@ export class ChartComponent implements OnInit {
         datasets: [{
           label: this.label,
           data: this.cases,
+          backgroundColor: this.backgroundColor,
         }]
       },
       options: {

@@ -84,13 +84,29 @@
   <h1>Daily Charts</h1>
 
     <div class="chart">
-      <app-chart [dates]="caseDates" [cases]="cases" [label]="casesLabel"></app-chart>
+      <app-chart [dates]="caseDates"
+                 [cases]="cases"
+                 [label]="casesLabel"
+                 [backgroundColor]="casesBackgroundColor">
+
+      </app-chart>
+    </div>
+
+    <div class="chart">
+      <app-chart [dates]="deathDates"
+                 [cases]="deaths"
+                 [label]="deathsLabel"
+                 [backgroundColor]="deathsBackgroundColor">
+
+      </app-chart>
     </div>
     <div class="chart">
-      <app-chart [dates]="deathDates" [cases]="deaths" [label]="deathsLabel"></app-chart>
-    </div>
-    <div class="chart">
-      <app-chart [dates]="recoveredDates" [cases]="recovered" [label]="recoveredLabel"></app-chart>
+      <app-chart [dates]="recoveredDates"
+                 [cases]="recovered"
+                 [label]="recoveredLabel"
+                 [backgroundColor]="recoveredBackgroundColor">
+
+      </app-chart>
     </div>
 
 
