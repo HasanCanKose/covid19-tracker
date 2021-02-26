@@ -4,6 +4,7 @@ import {CountryResponseModel} from '../models/country-response.model';
 import {ActivatedRoute} from '@angular/router';
 import {WorldResponseModel} from '../models/world-response.model';
 import {CountryDailyResponseModel} from '../models/country-daily-response.model';
+import {WorldDailyResponseModel} from '../models/world-daily-response.model';
 
 @Injectable({
   providedIn: 'root'
@@ -31,6 +32,6 @@ export class StatisticService implements OnInit{
   }
 
   worldDailyStatistics() {
-    return
+    return this.http.get<WorldDailyResponseModel>('https://corona.lmao.ninja/v2/historical/all');
   }
 }
