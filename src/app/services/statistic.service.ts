@@ -29,4 +29,8 @@ export class StatisticService implements OnInit{
   countryDailyStatistics(country: string) {
     return this.http.get<CountryDailyResponseModel>(`https://corona.lmao.ninja/v2/historical/${country}?lastdays=30`);
   }
+
+  worldDailyStatistics() {
+    return
+  }
 }
