@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Input, OnInit, ViewChild} from '@angular/core';
 import {Chart} from 'node_modules/chart.js'
 
 @Component({
@@ -8,21 +8,25 @@ import {Chart} from 'node_modules/chart.js'
 })
 export class ChartComponent implements OnInit {
 
+  @ViewChild('chart', {static: true }) chartRef;
+
+  @Input() dates: string[];
+  @Input() cases: number[];
+
   constructor() { }
 
   ngOnInit(): void {
+    this.chart();
   }
 
   chart() {
-    return new Chart('my-chart', {
+    return new Chart(this.chartRef.nativeElement, {
       type: 'bar',
       data: {
-        labels: [1, 2],
+        labels: this.dates,
         datasets: [{
           label: 'cases',
-          data: [1, 2],
-
-          borderWidth: 1
+          data: this.cases,
         }]
       },
       options: {

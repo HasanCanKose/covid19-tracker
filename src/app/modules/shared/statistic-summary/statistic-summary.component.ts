@@ -1,6 +1,5 @@
 import {Component, Input, OnInit} from '@angular/core';
 import {StatisticResponseModel} from '../../../models/statistic-response.model';
-import {CountryDailyResponseModel} from '../../../models/country-daily-response.model';
 
 @Component({
   selector: 'app-statistic-summary',
@@ -20,7 +19,6 @@ export class StatisticSummaryComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-    console.log(this.caseDates);
   }
 
 }

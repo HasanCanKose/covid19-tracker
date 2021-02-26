@@ -81,5 +81,18 @@
       <h2>{{statistics.todayRecovered | number}}</h2>
     </div>
   </div>
+  <h1>Daily Charts</h1>
+
+    <div class="chart">
+      <app-chart [dates]="caseDates" [cases]="cases"></app-chart>
+    </div>
+    <div class="chart">
+      <app-chart [dates]="deathDates" [cases]="deaths"></app-chart>
+    </div>
+    <div class="chart">
+      <app-chart [dates]="recoveredDates" [cases]="recovered"></app-chart>
+    </div>
+
 
 </div>
+
