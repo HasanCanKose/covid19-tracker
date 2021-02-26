@@ -8,6 +8,10 @@ import {StatisticResponseModel} from '../../../models/statistic-response.model';
 })
 export class StatisticSummaryComponent implements OnInit {
 
+  casesLabel = 'Cases';
+  deathsLabel = 'Deaths';
+  recoveredLabel = 'Recovered';
+
   @Input() statistics: StatisticResponseModel;
   @Input() caseDates: string[];
   @Input() cases: number[];

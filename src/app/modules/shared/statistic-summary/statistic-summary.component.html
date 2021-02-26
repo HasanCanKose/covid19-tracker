@@ -84,13 +84,13 @@
   <h1>Daily Charts</h1>
 
     <div class="chart">
-      <app-chart [dates]="caseDates" [cases]="cases"></app-chart>
+      <app-chart [dates]="caseDates" [cases]="cases" [label]="casesLabel"></app-chart>
     </div>
     <div class="chart">
-      <app-chart [dates]="deathDates" [cases]="deaths"></app-chart>
+      <app-chart [dates]="deathDates" [cases]="deaths" [label]="deathsLabel"></app-chart>
     </div>
     <div class="chart">
-      <app-chart [dates]="recoveredDates" [cases]="recovered"></app-chart>
+      <app-chart [dates]="recoveredDates" [cases]="recovered" [label]="recoveredLabel"></app-chart>
     </div>
 
 
