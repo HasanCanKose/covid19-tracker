@@ -14,7 +14,6 @@ export class CountriesComponent implements OnInit {
   dailyStatistics: CountryDailyResponseModel;
   caseDates: string[];
   cases: number[];
-
   deathDates: string[];
   deaths: number[];
   recoveredDates: string[];

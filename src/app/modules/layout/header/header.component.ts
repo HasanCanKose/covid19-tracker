@@ -29,7 +29,6 @@ export class HeaderComponent implements OnInit {
 
   onSubmit() {
     if(this.countryName) {
-      this.statisticService.country$.next(this.countryName);
       this.router.navigate([`countries/${this.countryName}`], {relativeTo: this.route})
         .then(result => this.isError = false)
         .catch(error => {
