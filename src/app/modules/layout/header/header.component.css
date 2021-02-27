@@ -45,4 +45,18 @@ input:focus {
   outline: none;
 }
 
+.select{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding-bottom: 100px;
+  z-index: 5;
+}
+
+.select ng-select{
+  width: 30%;
+
+}
+
 

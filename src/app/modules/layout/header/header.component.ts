@@ -11,24 +11,24 @@ import {CountryResponseModel} from '../../../models/country-response.model';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent implements OnInit {
-  @ViewChild('form', {static: true}) countryForm: NgForm;
-  countryInput;
-  country: { Country: string, Slug: string, ISO2: string };
-  countryNames: string[];
+
+  countryInput: string;
+  country: [{ Country: string, Slug: string, ISO2: string }];
 
   constructor(private router: Router, private route: ActivatedRoute, private statisticService: StatisticService) { }
 
   ngOnInit(): void {
     this.statisticService.countryNames().subscribe(country => {
       this.country = country;
+
+      console.log(this.country);
   });
   }
 
 
   onSubmit() {
-      this.countryInput = this.countryForm.value.countryInput;
       this.router.navigate([`countries/${this.countryInput}`], {relativeTo: this.route});
-      this.countryForm.reset();
+
   }
 
   onNavigate() {

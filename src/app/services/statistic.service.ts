@@ -36,6 +36,6 @@ export class StatisticService implements OnInit{
   }
 
   countryNames() {
-    return this.http.get<{ Country: string, Slug: string, ISO2: string }>('https://api.covid19api.com/countries');
+    return this.http.get<[{ Country: string, Slug: string, ISO2: string }]>('https://api.covid19api.com/countries');
   }
 }
