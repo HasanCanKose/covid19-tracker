@@ -2,11 +2,7 @@
   <div class="overlay">
     <h1 (click)="onNavigate()">Covid19 Tracker</h1>
     <h3>See the latest statistics</h3>
-<!--    <form  #form='ngForm'>-->
-<!--      <input (keyup.enter)="onSubmit()" type="text" placeholder="Select a country..." ngModel name="countryInput">-->
-<!--    </form>-->
-
-    <div class="select" *ngIf="country">
+    <div class="select">
     <ng-select [items]="country"
                bindLabel="country"
                bindValue="country"
@@ -15,9 +11,10 @@
                style="font-family: 'Dancing Script', cursive;"
                [(ngModel)]="countryName"
                (change)="onSubmit()">
-
     </ng-select>
     </div>
+    <h4 *ngIf="isError">{{errorMessage}}</h4>
+
 
   </div>
 </header>
