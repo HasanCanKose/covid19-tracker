@@ -22,7 +22,7 @@ header .overlay{
 h1 {
   font-family: 'Dancing Script', cursive;
   font-size: 80px;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
   cursor: pointer;
 }
 
@@ -50,12 +50,11 @@ input:focus {
   align-items: center;
   justify-content: center;
   width: 100%;
-  padding-bottom: 100px;
-  z-index: 5;
+  padding-bottom: 10px;
 }
 
 .select ng-select{
-  width: 30%;
+  width: 50%;
 
 }
 

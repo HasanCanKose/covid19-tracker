@@ -8,12 +8,13 @@
 
     <div class="select" *ngIf="country">
     <ng-select [items]="country"
-               bindLabel="Country"
-               bindValue="ISO2"
+               bindLabel="country"
+               bindValue="country"
                appendTo="body"
-               style="font-family: 'Open Sans', sans-serif; font-weight: lighter"
-               [(ngModel)]="countryInput"
-               (keyup.enter)="onSubmit()">
+               notFoundText="Country not found"
+               style="font-family: 'Dancing Script', cursive;"
+               [(ngModel)]="countryName"
+               (change)="onSubmit()">
 
     </ng-select>
     </div>
