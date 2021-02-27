@@ -2,6 +2,7 @@ import {Component, OnInit} from '@angular/core';
 import {ActivatedRoute} from '@angular/router';
 import {CountryResponseModel} from '../../../models/country-response.model';
 import {CountryDailyResponseModel} from '../../../models/country-daily-response.model';
+import {StatisticService} from '../../../services/statistic.service';
 
 @Component({
   selector: 'app-countries',
@@ -14,22 +15,27 @@ export class CountriesComponent implements OnInit {
   dailyStatistics: CountryDailyResponseModel;
   caseDates: string[];
   cases: number[];
-
   deathDates: string[];
   deaths: number[];
   recoveredDates: string[];
   recovered: number[];
 
+  country: string;
 
-  constructor(private route: ActivatedRoute) {
+
+  constructor(private route: ActivatedRoute, private statisticService: StatisticService) {
     this.route.data.subscribe(data => this.statistics = data['statistics']);
-    this.route.data.subscribe(data => this.dailyStatistics = data['dailyStatistics']);
+    // this.route.data.subscribe(data => this.dailyStatistics = data['dailyStatistics']);
   }
 
   ngOnInit(): void {
-    this.casesObjectToArray();
-    this.deathsObjectToArray();
-    this.recoveredObjectToArray();
+    this.statisticService.country$.subscribe(country => this.country = country);
+    this.statisticService.countryDailyStatistics(this.country).subscribe(dailyStatistics => {
+      this.dailyStatistics = dailyStatistics;
+      this.casesObjectToArray();
+      this.deathsObjectToArray();
+      this.recoveredObjectToArray();
+    });
   }
 
   casesObjectToArray() {

@@ -5,18 +5,21 @@ import {ActivatedRoute} from '@angular/router';
 import {WorldResponseModel} from '../models/world-response.model';
 import {CountryDailyResponseModel} from '../models/country-daily-response.model';
 import {WorldDailyResponseModel} from '../models/world-daily-response.model';
+import {ReplaySubject} from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
 export class StatisticService implements OnInit{
 
-  country;
+  country$ = new ReplaySubject<string>(1);
+
+  countryy;
 
   constructor(private http: HttpClient, private route: ActivatedRoute) { }
 
   ngOnInit() {
-    this.route.queryParams.subscribe(params => this.country = params['country']);
+    this.route.queryParams.subscribe(params => this.countryy = params['country']);
   }
 
   worldStatistics() {
