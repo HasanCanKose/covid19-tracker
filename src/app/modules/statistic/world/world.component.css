@@ -4,3 +4,9 @@
   font-size: 24px;
   color: dimgrey;
 }
+
+@media screen  and (max-width: 600px){
+  .content{
+    font-size: 20px;
+  }
+}
