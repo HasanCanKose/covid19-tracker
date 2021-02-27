@@ -14,7 +14,7 @@ export class StatisticSummaryComponent implements OnInit {
 
   casesBackgroundColor = '#9f05ff69';
   deathsBackgroundColor = 'rgba(0,0,0, 0.7)';
-  recoveredBackgroundColor = 'rgb(13,119,0, 0.5)';
+  recoveredBackgroundColor = '#fd5e086b';
 
   @Input() statistics: StatisticResponseModel;
   @Input() caseDates: string[];
