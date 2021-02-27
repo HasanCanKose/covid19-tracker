@@ -1,6 +1,5 @@
-import {Component, OnDestroy, OnInit} from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {StatisticService} from '../../../services/statistic.service';
-import {StatisticResponseModel} from '../../../models/statistic-response.model';
 import {ActivatedRoute} from '@angular/router';
 import {WorldResponseModel} from '../../../models/world-response.model';
 import {WorldDailyResponseModel} from '../../../models/world-daily-response.model';

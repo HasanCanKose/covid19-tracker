@@ -14,12 +14,9 @@ export class StatisticService implements OnInit{
 
   country$ = new ReplaySubject<string>(1);
 
-  countryy;
-
   constructor(private http: HttpClient, private route: ActivatedRoute) { }
 
   ngOnInit() {
-    this.route.queryParams.subscribe(params => this.countryy = params['country']);
   }
 
   worldStatistics() {

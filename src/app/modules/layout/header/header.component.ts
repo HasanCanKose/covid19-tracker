@@ -1,10 +1,7 @@
-import {Component, OnInit, ViewChild} from '@angular/core';
-import {NgForm} from '@angular/forms';
+import {Component, OnInit} from '@angular/core';
 import {ActivatedRoute, Router} from '@angular/router';
 import {StatisticService} from '../../../services/statistic.service';
-import {map} from 'rxjs/operators';
 import {CountryResponseModel} from '../../../models/country-response.model';
-import {log} from 'util';
 
 @Component({
   selector: 'app-header',

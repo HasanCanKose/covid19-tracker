@@ -13,7 +13,8 @@
   <div class="right"></div>
 </div>
 
-<app-statistic-summary [statistics]="statistics"
+<app-statistic-summary *ngIf="statistics && caseDates"
+                       [statistics]="statistics"
                        [caseDates]="caseDates"
                        [cases]="cases"
                        [deathDates]="deathDates"
