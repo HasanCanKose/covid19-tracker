@@ -88,14 +88,24 @@ ng-select.custom{
   font-family: 'Open Sans', sans-serif;
 }
 
-ng-select.custom .ng-select-container{
-  outline: none;
-  border: none;
-}
-
 .error{
   font-size: 16px;
   font-family: 'Open Sans', sans-serif;
+}
+
+@media screen and (max-width: 700px){
+  h1{
+    font-size: 40px;
+  }
+
+  .button{
+    padding: 7px 20px;
+    font-size: 14px;
+  }
+
+  ng-select.custom{
+    width: 70%;
+  }
 }
 
 
