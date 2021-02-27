@@ -81,9 +81,21 @@ input:focus {
 
 }
 
-.select ng-select{
+ng-select.custom{
   width: 50%;
   margin-left: 8px;
+  outline: none;
+  font-family: 'Open Sans', sans-serif;
+}
+
+ng-select.custom .ng-select-container{
+  outline: none;
+  border: none;
+}
+
+.error{
+  font-size: 16px;
+  font-family: 'Open Sans', sans-serif;
 }
 
 

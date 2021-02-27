@@ -4,18 +4,17 @@
     <h3>See the latest statistics</h3>
     <div class="select">
       <button class="button" (click)="onNavigate()">World</button>
-    <ng-select [items]="country"
+    <ng-select class="custom"
+               [items]="country"
                bindLabel="country"
                bindValue="country"
                appendTo="body"
                notFoundText="Country not found"
-               style="font-family: 'Dancing Script', cursive;"
+               placeholder="Select Country..."
                [(ngModel)]="countryName"
                (change)="onSubmit()">
     </ng-select>
     </div>
-    <h4 *ngIf="isError">{{errorMessage}}</h4>
-
-
+    <h4 *ngIf="isError" class="error">{{errorMessage}}</h4>
   </div>
 </header>
