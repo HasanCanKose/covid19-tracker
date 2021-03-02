@@ -104,6 +104,14 @@ hr {
   width: 90%;
 }
 
+.today-cases h2 {
+  color: dimgrey;
+}
+
+.today-recovered h2 {
+  color: green;
+}
+
 .chart{
   width: 50%;
   height: auto;
