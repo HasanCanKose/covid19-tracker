@@ -1,5 +1,5 @@
 footer {
-  background: url('/assets/images/virus.jpg');
+  background-image: url('src/assets/images/virus.jpg');
   text-align: center;
   width: 100%;
   height: auto;
