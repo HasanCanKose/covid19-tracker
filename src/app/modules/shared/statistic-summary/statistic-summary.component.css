@@ -28,6 +28,18 @@
   width: 80%;
 }
 
+.tests h2 {
+  color: rgba(60, 29, 79, 0.8);
+}
+
+.cases h2 {
+  color: dimgrey;
+}
+
+.recovered h2 {
+  color: green;
+}
+
 .content{
   display: grid;
   grid-template-columns: 1fr;

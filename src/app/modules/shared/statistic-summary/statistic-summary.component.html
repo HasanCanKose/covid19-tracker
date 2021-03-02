@@ -5,24 +5,30 @@
   <div class="row">
     <div class="tests info">
       <h1>Tests</h1>
+      <hr>
       <h2>{{statistics.tests | number}}</h2>
     </div>
     <div class="cases info">
       <h1>Cases</h1>
-      <h2>{{statistics.cases | comma}}</h2>
+      <hr>
+      <h2>{{statistics.cases | number}}</h2>
     </div>
   </div>
   <div class="row">
     <div class="deaths info">
       <h1>Deaths</h1>
+      <hr>
       <h2>{{statistics.deaths | number}}</h2>
     </div>
     <div class="recovered info">
       <h1>Recovered</h1>
-      <h2>{{statistics.recovered | comma}}</h2>
+      <hr>
+      <h2>{{statistics.recovered | number}}</h2>
     </div>
   </div>
+  <br>
   <hr>
+  <br>
   <div class="row-active-closed">
   <div class="content">
     <div class="header">
@@ -30,16 +36,16 @@
     </div>
     <br>
     <div class="all-patients">
-      <h2>{{statistics.active | comma}}</h2>
+      <h2>{{statistics.active | number}}</h2>
       <p>Currently Infected Patients</p>
     </div>
     <div class="row">
       <div class="mild">
-        <h2>{{statistics.active - statistics.critical | comma}}</h2>
+        <h2>{{statistics.active - statistics.critical | number}}</h2>
         <p>in Mild Condition</p>
       </div>
       <div class="critical">
-        <h2>{{statistics.critical | comma}}</h2>
+        <h2>{{statistics.critical | number}}</h2>
         <p>Serious or Critical</p>
       </div>
     </div>
@@ -50,22 +56,24 @@
       </div>
       <br>
       <div class="all-patients">
-        <h2>{{statistics.recovered + statistics.deaths | comma}}</h2>
+        <h2>{{statistics.recovered + statistics.deaths | number}}</h2>
         <p>Cases which had an outcome</p>
       </div>
       <div class="row">
         <div class="mild">
-          <h2 id="recovered">{{statistics.recovered | comma}}</h2>
+          <h2 id="recovered">{{statistics.recovered | number}}</h2>
           <p>Recovered</p>
         </div>
         <div class="critical">
-          <h2 id="deaths">{{statistics.deaths | comma}}</h2>
+          <h2 id="deaths">{{statistics.deaths | number}}</h2>
           <p>Deaths</p>
         </div>
       </div>
     </div>
   </div>
+  <br>
   <hr>
+  <br>
   <h1>Daily Data</h1>
   <div class="today-row">
     <div class="today-cases info">
@@ -81,6 +89,9 @@
       <h2>{{statistics.todayRecovered | number}}</h2>
     </div>
   </div>
+  <br>
+  <hr>
+  <br>
   <h1>Daily Charts</h1>
 
     <div class="chart">
