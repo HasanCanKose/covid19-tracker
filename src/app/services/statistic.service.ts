@@ -28,11 +28,11 @@ export class StatisticService implements OnInit{
   }
 
   countryDailyStatistics(country: string) {
-    return this.http.get<CountryDailyResponseModel>(`https://corona.lmao.ninja/v2/historical/${country}?lastdays=30`);
+    return this.http.get<CountryDailyResponseModel>(`https://corona.lmao.ninja/v2/historical/${country}?lastdays=900`);
   }
 
   worldDailyStatistics() {
-    return this.http.get<WorldDailyResponseModel>('https://corona.lmao.ninja/v2/historical/all');
+    return this.http.get<WorldDailyResponseModel>('https://corona.lmao.ninja/v2/historical/all?lastdays=900');
   }
 
   countryNames() {

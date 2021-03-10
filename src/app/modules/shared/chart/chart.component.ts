@@ -24,7 +24,7 @@ export class ChartComponent implements OnInit {
 
   chart() {
     return new Chart(this.chartRef.nativeElement, {
-      type: 'bar',
+      type: 'line',
       data: {
         labels: this.dates,
         datasets: [{

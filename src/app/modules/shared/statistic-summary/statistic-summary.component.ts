@@ -8,9 +8,9 @@ import {StatisticResponseModel} from '../../../models/statistic-response.model';
 })
 export class StatisticSummaryComponent implements OnInit {
 
-  casesLabel = 'Cases';
-  deathsLabel = 'Deaths';
-  recoveredLabel = 'Recovered';
+  casesLabel = 'Total Cases';
+  deathsLabel = 'Total Deaths';
+  recoveredLabel = 'Total Recovered';
 
   casesBackgroundColor = '#9f05ff69';
   deathsBackgroundColor = 'rgba(0,0,0, 0.7)';
