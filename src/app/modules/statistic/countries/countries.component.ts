@@ -19,7 +19,6 @@ export class CountriesComponent implements OnInit {
   recoveredDates: string[];
   recovered: number[];
 
-
   constructor(private route: ActivatedRoute) {
     this.route.data.subscribe(data => this.statistics = data['statistics']);
     this.route.data.subscribe(data => this.dailyStatistics = data['dailyStatistics']);
