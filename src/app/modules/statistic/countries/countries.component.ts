@@ -3,6 +3,7 @@ import {ActivatedRoute} from '@angular/router';
 import {CountryResponseModel} from '../../../models/country-response.model';
 import {CountryDailyResponseModel} from '../../../models/country-daily-response.model';
 
+
 @Component({
   selector: 'app-countries',
   templateUrl: './countries.component.html',
@@ -20,23 +21,22 @@ export class CountriesComponent implements OnInit {
   recovered: number[];
 
   constructor(private route: ActivatedRoute) {
-    this.route.data.subscribe(data => this.statistics = data['statistics']);
-    this.route.data.subscribe(data => this.dailyStatistics = data['dailyStatistics']);
   }
 
   ngOnInit(): void {
-    this.casesObjectToArray();
-    this.deathsObjectToArray();
-    this.recoveredObjectToArray();
+    this.route.data.subscribe(data => {
+      this.statistics = data['statistics'];
+      this.dailyStatistics = data['dailyStatistics'];
+      this.casesObjectToArray();
+      this.deathsObjectToArray();
+      this.recoveredObjectToArray();
+    })
   }
 
   casesObjectToArray() {
-    this.caseDates = Object.keys(this.dailyStatistics.timeline.cases).map(key => {
-      return key
-    });
-    this.cases = Object.values(this.dailyStatistics.timeline.cases).map(value => {
-      return value
-    });
+    [this.caseDates, this.cases] = Object.entries(this.dailyStatistics.timeline.cases).reduce((acc, [key, value]) => {
+      return [[...acc[0], key], [...acc[1], value]];
+    }, [[], []]);
   }
 
   deathsObjectToArray() {
