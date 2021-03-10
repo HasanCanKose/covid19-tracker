@@ -26,36 +26,19 @@ export class WorldComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.casesObjectToArray();
-    this.deathsObjectToArray();
-    this.recoveredObjectToArray();
+    this.objectToArray();
+  }
+  mapToKeyValueArray(values) {
+    return Object.entries(values).reduce((acc, [key, value]) => {
+      return [[...acc[0], key], [...acc[1], value]];
+    }, [[], []]);
   }
 
-  casesObjectToArray() {
-    this.caseDates = Object.keys(this.dailyStatistics.cases).map(key => {
-      return key
-    });
-    this.cases = Object.values(this.dailyStatistics.cases).map(value => {
-      return value
-    });
+  objectToArray() {
+    [this.caseDates, this.cases] = this.mapToKeyValueArray(this.dailyStatistics.cases);
+    [this.deathDates, this.deaths] = this.mapToKeyValueArray(this.dailyStatistics.deaths);
+    [this.recoveredDates, this.recovered] = this.mapToKeyValueArray(this.dailyStatistics.recovered);
   }
 
-  deathsObjectToArray() {
-    this.deathDates = Object.keys(this.dailyStatistics.deaths).map(key => {
-      return key
-    });
-    this.deaths = Object.values(this.dailyStatistics.deaths).map(value => {
-      return value
-    });
-  }
-
-  recoveredObjectToArray() {
-    this.recoveredDates = Object.keys(this.dailyStatistics.recovered).map(key => {
-      return key
-    });
-    this.recovered = Object.values(this.dailyStatistics.recovered).map(value => {
-      return value
-    });
-  }
 
 }

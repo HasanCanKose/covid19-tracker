@@ -27,33 +27,19 @@ export class CountriesComponent implements OnInit {
     this.route.data.subscribe(data => {
       this.statistics = data['statistics'];
       this.dailyStatistics = data['dailyStatistics'];
-      this.casesObjectToArray();
-      this.deathsObjectToArray();
-      this.recoveredObjectToArray();
+      this.objectToArray();
     })
   }
 
-  casesObjectToArray() {
-    [this.caseDates, this.cases] = Object.entries(this.dailyStatistics.timeline.cases).reduce((acc, [key, value]) => {
+  mapToKeyValueArray(values) {
+    return Object.entries(values).reduce((acc, [key, value]) => {
       return [[...acc[0], key], [...acc[1], value]];
     }, [[], []]);
   }
 
-  deathsObjectToArray() {
-    this.deathDates = Object.keys(this.dailyStatistics.timeline.deaths).map(key => {
-      return key
-    });
-    this.deaths = Object.values(this.dailyStatistics.timeline.deaths).map(value => {
-      return value
-    });
-  }
-
-  recoveredObjectToArray() {
-    this.recoveredDates = Object.keys(this.dailyStatistics.timeline.recovered).map(key => {
-      return key
-    });
-    this.recovered = Object.values(this.dailyStatistics.timeline.recovered).map(value => {
-      return value
-    });
+  objectToArray() {
+    [this.caseDates, this.cases] = this.mapToKeyValueArray(this.dailyStatistics.timeline.cases);
+    [this.deathDates, this.deaths] = this.mapToKeyValueArray(this.dailyStatistics.timeline.deaths);
+    [this.recoveredDates, this.recovered] = this.mapToKeyValueArray(this.dailyStatistics.timeline.recovered);
   }
 }
